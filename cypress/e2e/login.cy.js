@@ -1,5 +1,5 @@
 import LoginPage from '../pages/loginPage';
-//import Products from '../pages/Products';
+import Products from '../pages/Products';
 
 describe('Login tests', () =>{
 
@@ -33,7 +33,7 @@ describe('Login tests', () =>{
             cy.url().should('include', '/inventory');
         });
 
-        //Products.products.productImages().invoke('attr','src').should('include','/assets/sl-404-Cq1a9k9X.jpg');
+        Products.products.productImages().invoke('attr','src').should('include','/assets/sl-404-Cq1a9k9X.jpg');
         LoginPage.logout();
     });
 });
